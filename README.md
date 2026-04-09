@@ -1,2 +1,2 @@
 # mertg35.github.io
-İZMİR TEKNİK PROJECT
+İZMİR TEKNİK PROJECT test
