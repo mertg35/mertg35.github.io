@@ -80,7 +80,7 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
         h1, h2, h3, .brand-logo { font-family: 'Work Sans', sans-serif; }
         
         /* Mobile Menu Toggle State */
@@ -97,22 +97,22 @@
         }
     </style>
 </head>
-<body class="bg-white text-on-surface selection:bg-primary/20">
+<body class="bg-white text-on-surface selection:bg-primary/20" id="top">
 <!-- Top Navigation Shell -->
 <header class="bg-white dark:bg-slate-900 border-b border-[#bec8d1]/20 shadow-sm sticky top-0 z-50">
 <nav class="w-full px-4 sm:px-8 max-w-screen-2xl mx-auto py-2">
 <div class="flex justify-between items-center w-full">
-<div class="flex items-center gap-4 lg:gap-8">
-<a class="flex items-center gap-2" href="index.html">
-<img alt="İzmir Teknik Logo" class="w-auto h-20 sm:h-24 md:h-32 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
+<div class="flex items-center gap-6 md:gap-12">
+<a class="flex items-center gap-2" href="#top">
+<img alt="İzmir Teknik Logo" class="w-auto h-20 sm:h-24 md:h-32 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
 </a>
-<!-- Desktop Menu -->
-<div class="hidden lg:flex gap-6 items-center">
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="index.html">Ana Sayfa</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="index.html">Kurumsal</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="#">Ürünler</a>
-<a class="text-[#00628d] font-bold border-b-2 border-[#00628d] pb-1 hover:text-[#845400] transition-colors duration-300 text-lg" href="#">Bayilikler</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="#">İletişim</a>
+<!-- Desktop Menu - Aligned to the left next to logo -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-slate-700 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="index.html">Ana Sayfa</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="index.html">Kurumsal</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="bayilikler.html">Ürünler</a>
+<a class="text-[#00628d] font-bold border-b-2 border-[#00628d] pb-1 hover:text-[#845400] transition-colors duration-300 text-lg" href="bayilikler.html">Bayilikler</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors duration-300 text-lg font-bold" href="#footer">İletişim</a>
 </div>
 </div>
 <!-- Mobile Menu Button -->
@@ -122,11 +122,11 @@
 </div>
 <!-- Mobile Menu Dropdown -->
 <div class="lg:hidden flex flex-col gap-4 mt-4" id="mobile-menu">
-<a class="text-slate-600 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="index.html">Ana Sayfa</a>
-<a class="text-slate-600 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="index.html">Kurumsal</a>
-<a class="text-slate-600 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="#">Ürünler</a>
-<a class="text-[#00628d] font-bold text-lg py-2 border-b border-outline-variant/10" href="#">Bayilikler</a>
-<a class="text-slate-600 hover:text-[#845400] transition-colors text-lg font-bold py-2" href="#">İletişim</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="index.html">Ana Sayfa</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="index.html">Kurumsal</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors text-lg font-bold py-2 border-b border-outline-variant/10" href="bayilikler.html">Ürünler</a>
+<a class="text-[#00628d] font-bold text-lg py-2 border-b border-outline-variant/10" href="bayilikler.html">Bayilikler</a>
+<a class="text-slate-700 hover:text-[#845400] transition-colors text-lg font-bold py-2" href="#footer">İletişim</a>
 </div>
 </nav>
 </header>
@@ -260,11 +260,11 @@
 </div>
 </main>
 <!-- Footer Shell -->
-<footer class="bg-white w-full border-t border-[#bec8d1]/20 mt-12 md:mt-20">
+<footer class="bg-white w-full border-t border-[#bec8d1]/20 mt-12 md:mt-20" id="footer">
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 px-6 sm:px-12 py-12 md:py-16 max-w-screen-2xl mx-auto">
 <div class="space-y-6">
-<a class="block" href="index.html">
-<img alt="İzmir Teknik Logo" class="w-auto object-contain mb-6 h-32 md:h-48" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
+<a class="block" href="#top">
+<img alt="İzmir Teknik Logo" class="w-auto object-contain mb-6 h-32 md:h-48 cursor-pointer" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
 </a>
 <p class="text-sm text-slate-500 leading-relaxed">Endüstriyel ekipman ve teknik hırdavat tedariğinde Ege Bölgesi'nin güvenilir çözüm merkezi. İzmir Teknik profesyonel kadrosuyla yanınızdayız.</p>
 <div class="flex gap-4">
@@ -278,12 +278,7 @@
 </div>
 <div class="space-y-4">
 <h4 class="text-sm font-black text-on-surface uppercase tracking-widest">Hızlı Bağlantılar</h4>
-<ul class="space-y-2">
-<li><a class="hover:text-[#00628d] text-sm font-medium" href="index.html">Kurumsal</a></li>
-<li><a class="hover:text-[#00628d] text-sm font-medium" href="#">Ürün Grupları</a></li>
-<li><a class="hover:text-[#00628d] text-sm font-medium" href="#">Teknik Destek</a></li>
-<li><a class="hover:text-[#00628d] text-sm font-medium" href="#">Kariyer</a></li>
-</ul>
+<ul class="space-y-2"><li><a class="hover:text-[#00628d] text-sm font-medium" href="#top">Kurumsal</a></li><li><a class="hover:text-[#00628d] text-sm font-medium" href="#top">Tüm Ürünler</a></li><li><a class="hover:text-[#00628d] text-sm font-medium" href="#top">Yeni Gelenler</a></li><li><a class="hover:text-[#00628d] text-sm font-medium" href="#top">Kampanyalar</a></li></ul>
 </div>
 <div class="space-y-4">
 <h4 class="text-sm font-black text-on-surface uppercase tracking-widest">Müşteri Köşesi</h4>
@@ -332,6 +327,14 @@
             mobileMenu.classList.remove('active');
             toggleIcon.textContent = 'menu';
         }
+    });
+
+    // Handle smooth scroll for Iletisim in mobile menu
+    mobileMenu.querySelectorAll('a[href="#footer"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            mobileMenu.classList.remove('active');
+            toggleIcon.textContent = 'menu';
+        });
     });
 </script>
 </body></html>
