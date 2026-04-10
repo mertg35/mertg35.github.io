@@ -21,6 +21,14 @@
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
         }
+        
+        /* Mobile Menu Toggle Logic */
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: flex;
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -89,155 +97,168 @@
 </head>
 <body class="bg-white font-body text-on-surface">
 <!-- TopNavBar -->
-<nav class="flex items-center w-full px-8 py-4 max-w-screen-2xl mx-auto justify-start">
+<nav class="relative w-full px-4 md:px-8 py-4 max-w-screen-2xl mx-auto flex items-center justify-between">
 <div class="flex-shrink-0">
-<img alt="İzmir Teknik Logo" class="w-auto object-contain h-24 lg:h-28" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
+<img alt="İzmir Teknik Logo" class="w-auto object-contain h-20 md:h-24 lg:h-28" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
 </div>
-<div class="hidden md:flex items-center space-x-8 lg:space-x-12 px-4 ml-12">
-<a class="text-[#00628d] font-bold text-xl border-b-2 border-[#00628d] pb-1 hover:text-[#845400] transition-colors duration-300" href="#">Ana Sayfa</a>
-<a class="text-slate-600 font-bold text-xl hover:text-[#845400] transition-colors duration-300" href="#">Kurumsal</a>
-<a class="text-slate-600 font-bold text-xl hover:text-[#845400] transition-colors duration-300" href="#">Ürünler</a>
-<a class="text-slate-600 font-bold text-xl hover:text-[#845400] transition-colors duration-300" href="Bayilikler.html">Bayilikler</a>
-<a class="text-slate-600 font-bold text-xl hover:text-[#845400] transition-colors duration-300" href="#">İletişim</a>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center space-x-6 lg:space-x-12 px-4">
+<a class="text-[#00628d] font-bold text-lg lg:text-xl border-b-2 border-[#00628d] pb-1 hover:text-[#845400] transition-colors duration-300" href="#">Ana Sayfa</a>
+<a class="text-slate-600 font-bold text-lg lg:text-xl hover:text-[#845400] transition-colors duration-300" href="#">Kurumsal</a>
+<a class="text-slate-600 font-bold text-lg lg:text-xl hover:text-[#845400] transition-colors duration-300" href="#">Ürünler</a>
+<a class="text-slate-600 font-bold text-lg lg:text-xl hover:text-[#845400] transition-colors duration-300" href="Bayilikler.html">Bayilikler</a>
+<a class="text-slate-600 font-bold text-lg lg:text-xl hover:text-[#845400] transition-colors duration-300" href="#">İletişim</a>
+</div>
+<!-- Hamburger Button -->
+<button class="md:hidden text-[#00628d] p-2 focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+<!-- Mobile Menu Overlay -->
+<div class="absolute top-full left-0 right-0 bg-white shadow-2xl z-50 flex-col p-6 space-y-4 md:hidden border-t" id="mobile-menu">
+<a class="text-[#00628d] font-bold text-xl py-2" href="#">Ana Sayfa</a>
+<a class="text-slate-600 font-bold text-xl py-2" href="#">Kurumsal</a>
+<a class="text-slate-600 font-bold text-xl py-2" href="#">Ürünler</a>
+<a class="text-slate-600 font-bold text-xl py-2" href="Bayilikler.html">Bayilikler</a>
+<a class="text-slate-600 font-bold text-xl py-2" href="#">İletişim</a>
 </div>
 </nav>
 <!-- Hero Section -->
-<section class="relative h-[870px] flex items-center overflow-hidden">
+<section class="relative min-h-[600px] md:h-[870px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <img alt="Automated Industrial Welding Robot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA86oD5olUYBMOZvWBQmDUhdMaHSgFNmCO1l2P2-SHRxEdESblBseQpJKL21qdZnfRHxegrD1khoyA78sSPvqR4hVxenF_a_WFiTcvUd46PDWYf9hacKQlNnBoPF8Q5TSIRXZPZL1TJmHbCzavsOxgcy5Dgayq-3LpCODfoukFHvo1ngzqVSVmmRODMJB54IQ0XHAKS9NingdapGjrQa3GXU2j0lwbkzweDoi5O0HzBR4oJTVW87CYGFwIP12C9XsUSqOTimPCRr3Ft"/>
-<div class="absolute inset-0 bg-gradient-to-r from-[#001e2f]/90 via-[#001e2f]/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#001e2f]/95 via-[#001e2f]/60 md:via-[#001e2f]/40 to-transparent"></div>
 </div>
-<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+<div class="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-8 w-full py-12 md:py-0">
 <div class="max-w-3xl">
-<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary text-on-secondary text-xs font-bold uppercase tracking-widest mb-6">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary text-on-secondary text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6">
 <span class="material-symbols-outlined text-sm">verified</span>
-                Endüstriyel Mükemmeliyet
-            </div>
-<h1 class="text-6xl md:text-7xl font-headline font-black text-white leading-[1.1] mb-8">
-                Endüstriyel <br/>
+                    Endüstriyel Mükemmeliyet
+                </div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-white leading-[1.1] mb-6 md:mb-8">
+                    Endüstriyel <br/>
 <span class="text-secondary-container">Çözümlerde</span> <br/>
-                Güvenilir Ortağınız
-            </h1>
-<p class="text-xl text-slate-200 mb-10 max-w-xl leading-relaxed">
+                    Güvenilir Ortağınız
+                </h1>
+<p class="text-lg md:text-xl text-slate-200 mb-8 md:text-10 max-w-xl leading-relaxed">
 <span class="text-secondary-container font-bold">TECHNOLIT</span>’in endüstriyel çözüm gücü ve <span class="text-secondary-container font-bold">TECHNIK</span>’in üretim uzmanlığıyla, teknik malzeme tedariğinde işletmenizin en güvenilir çözüm ortağıyız.
-            </p>
+                </p>
 <div class="flex flex-wrap gap-4">
-<a class="glass-panel border border-white/20 text-on-background px-10 py-4 rounded-lg font-bold text-lg hover:bg-white transition-colors flex items-center justify-center" href="Bayilikler.html">Katalogları İncele</a>
+<a class="glass-panel border border-white/20 text-on-background px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-white transition-colors flex items-center justify-center w-full sm:w-auto" href="Bayilikler.html">Katalogları İncele</a>
 </div>
 </div>
 </div>
 <!-- Float Stats -->
-<div class="absolute bottom-12 right-8 hidden xl:flex gap-6">
-<div class="glass-panel p-6 rounded-xl border border-white/10 shadow-xl min-w-[200px]">
-<div class="text-3xl font-black text-tertiary mb-1">25+ Yıl</div>
-<div class="text-sm font-medium text-slate-600">Sektörel Tecrübe</div>
+<div class="absolute bottom-6 left-6 right-6 md:bottom-12 md:right-8 flex flex-col md:flex-row gap-4 xl:gap-6 md:justify-end">
+<div class="glass-panel p-4 md:p-6 rounded-xl border border-white/10 shadow-xl flex-1 md:min-w-[200px] md:flex-none">
+<div class="text-2xl md:text-3xl font-black text-tertiary mb-1">25+ Yıl</div>
+<div class="text-xs md:text-sm font-medium text-slate-600">Sektörel Tecrübe</div>
 </div>
-<div class="glass-panel p-6 rounded-xl border border-white/10 shadow-xl min-w-[200px]">
-<div class="text-3xl font-black text-primary mb-1">15k+</div>
-<div class="text-sm font-medium text-slate-600">Aktif Ürün Çeşidi</div>
+<div class="glass-panel p-4 md:p-6 rounded-xl border border-white/10 shadow-xl flex-1 md:min-w-[200px] md:flex-none">
+<div class="text-2xl md:text-3xl font-black text-primary mb-1">15k+</div>
+<div class="text-xs md:text-sm font-medium text-slate-600">Aktif Ürün Çeşidi</div>
 </div>
-<div class="glass-panel p-6 rounded-xl border border-white/10 shadow-xl min-w-[200px]">
-<div class="text-3xl font-black text-secondary mb-1">24h</div>
-<div class="text-sm font-medium text-slate-600">Hızlı Teslimat Desteği</div>
+<div class="glass-panel p-4 md:p-6 rounded-xl border border-white/10 shadow-xl flex-1 md:min-w-[200px] md:flex-none">
+<div class="text-2xl md:text-3xl font-black text-secondary mb-1">24h</div>
+<div class="text-xs md:text-sm font-medium text-slate-600">Hızlı Teslimat Desteği</div>
 </div>
 </div>
 </section>
 <!-- Featured Categories -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<section class="py-16 md:py-24 px-6 md:px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
 <div class="max-w-2xl">
-<h2 class="text-4xl font-headline font-black text-[#00628d] mb-4">Uzmanlık Alanlarımız</h2>
-<p class="text-lg text-slate-600">Sektörün lider markalarını, mühendislik hassasiyeti ve teknik destekle birleştiriyoruz.</p>
+<h2 class="text-3xl md:text-4xl font-headline font-black text-[#00628d] mb-4">Uzmanlık Alanlarımız</h2>
+<p class="text-base md:text-lg text-slate-600">Sektörün lider markalarını, mühendislik hassasiyeti ve teknik destekle birleştiriyoruz.</p>
 </div>
-<a class="text-primary font-bold flex items-center gap-2 group" href="Bayilikler.html">
-            Tüm Kategorileri Gör 
-            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+<a class="text-primary font-bold flex items-center gap-2 group whitespace-nowrap" href="Bayilikler.html">
+                Tüm Kategorileri Gör 
+                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-6 grid-rows-2 gap-6 h-auto md:h-[750px]">
-<!-- 1. HSS Delici & Kesici Takımlar (Largest - Span 3 Columns, 2 Rows) -->
-<a class="md:col-span-3 md:row-span-2 relative rounded-2xl overflow-hidden group" href="Bayilikler.html">
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto">
+<!-- 1. HSS Delici & Kesici Takımlar (Full width on mobile, spans columns on desktop) -->
+<a class="md:col-span-3 md:row-span-2 relative rounded-2xl overflow-hidden group min-h-[400px]" href="Bayilikler.html">
 <img alt="professional high-speed steel drill bits and milling tools" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsjVfUmsyyfUh82DLt0rPgeVG8F2g49rZWXCzAC-NhurnsqScHuB6P1qZaveCN5cbIRy0jZqLNupWLVe9NgPGmlpqcaEm_Q8SjeR5VECTMFoXoSLqxj5ZafVge33nzN3zdLI6-DBKLK5hr3ymhjKW5DF9MZT_Fdzp2RFptTibjMrncb8hlqZktcJtBschQGGMACm7VLETysBvn0yMOP8TMuLQCiEddREVbU4YyMoENwyrb0r6JN_1KqEeEQ-lyuUFFFKZ9387o8qx5"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-10">
-<div class="w-16 h-1 bg-secondary mb-4"></div>
-<h3 class="text-3xl font-black text-white mb-2">HSS Delici &amp; Kesici Takımlar</h3>
-<p class="text-slate-300 mb-6 max-w-sm">Endüstriyel üretim hatları için yüksek hassasiyetli matkap uçları, freze bıçakları ve teknik kesim çözümleri.</p>
-<span class="material-symbols-outlined text-white text-4xl">precision_manufacturing</span>
+<div class="absolute bottom-0 left-0 p-6 md:p-10">
+<div class="w-12 md:w-16 h-1 bg-secondary mb-4"></div>
+<h3 class="text-2xl md:text-3xl font-black text-white mb-2">HSS Delici &amp; Kesici Takımlar</h3>
+<p class="text-slate-300 mb-6 max-w-sm text-sm md:text-base">Endüstriyel üretim hatları için yüksek hassasiyetli matkap uçları, freze bıçakları ve teknik kesim çözümleri.</p>
+<span class="material-symbols-outlined text-white text-3xl md:text-4xl">precision_manufacturing</span>
 </div>
 </a>
-<!-- 2. Kaynak Teknolojileri (Span 3 Columns, 1 Row) -->
-<a class="md:col-span-3 relative rounded-2xl overflow-hidden group" href="Bayilikler.html">
+<!-- 2. Kaynak Teknolojileri -->
+<a class="md:col-span-3 relative rounded-2xl overflow-hidden group min-h-[250px] md:h-auto" href="Bayilikler.html">
 <img alt="automated welding robot in industrial factory" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSQAUFRL3qp_K5GbwrzMpAyZY9RvpzCnE3P8keJEbeh09lnulWdwjtFzI1sdlZ401smNB9x8aXvvKxMTvwPnv6qgipyd2OTRWo_woRCTgqar8_npJuODbsYJTsET0DVp2pfr_f49xwCXTnoEHkEz3t4LY4iQnJFFGMAKwFV0DV3kkte8d0viT71QceAaKyB_5vKhvA42zbGJmYKhIwyCLoM1i2Zf6B2Ur9kpy5Bkjn5I48E_0YQpiz6adVesap9rxxM_Fgxb4_I25Q"/>
 <div class="absolute inset-0 bg-gradient-to-r from-[#001e2f]/80 to-transparent"></div>
-<div class="absolute inset-0 flex flex-col justify-center p-10">
-<h3 class="text-2xl font-black text-white mb-2">Kaynak Teknolojileri</h3>
-<p class="text-blue-100 mb-6 max-w-md">TECHNOLIT güvencesiyle en zorlu metal birleştirme işlemleri için profesyonel çözümler.</p>
+<div class="absolute inset-0 flex flex-col justify-center p-6 md:p-10">
+<h3 class="text-xl md:text-2xl font-black text-white mb-2">Kaynak Teknolojileri</h3>
+<p class="text-blue-100 mb-6 max-w-md text-sm md:text-base">TECHNOLIT güvencesiyle en zorlu metal birleştirme işlemleri için profesyonel çözümler.</p>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-white">flare</span>
 </div>
 </div>
 </a>
-<!-- 3. Bağlantı Elemanları (Span 2 Columns, 1 Row) - REDESIGNED -->
-<a class="md:col-span-2 relative rounded-2xl overflow-hidden group bg-slate-50 border border-slate-100" href="Bayilikler.html">
+<!-- 3. Bağlantı Elemanları -->
+<a class="md:col-span-2 relative rounded-2xl overflow-hidden group bg-slate-50 border border-slate-100 min-h-[250px]" href="Bayilikler.html">
 <img alt="professional industrial fasteners bolts nuts and washers macro" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwRM7e_j8y3WWMKIsfGD1SPlHLcWyhYqgzJr29Zi_ZyASkyNJyRqwaESu_YYlJocNEadQrhbUWR_ePM49wxYdSnAea88FwqeqX5pJ2K5EAxYOAayRz9P7LeIkAR1w3EWvxxOSm26kPyzSdq-kBB-LMHuKt4yzglCCj3FPXcjt8PwRV9GuyAQ_Jsy2Wjw75cIuZKlID8POFXrCX9g6TVf97JjVNZMmEJYfAQafYpwofcriT4DLlx477qsRPxz7N1enoWxlLQtunvaTv"/>
 <div class="absolute inset-0 bg-[#00628d]/70 mix-blend-multiply group-hover:bg-[#00628d]/60 transition-colors"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
 <div class="flex items-center gap-2 mb-3">
 <span class="material-symbols-outlined text-secondary-container">settings_input_component</span>
-<span class="text-xs font-bold text-white uppercase tracking-tighter">Endüstriyel Sabitleme</span>
+<span class="text-[10px] md:text-xs font-bold text-white uppercase tracking-tighter">Endüstriyel Sabitleme</span>
 </div>
-<h3 class="text-2xl font-black text-white mb-2">Bağlantı Elemanları</h3>
-<p class="text-slate-200 text-sm leading-relaxed">DIN normlarına uygun yüksek mukavemetli somun, cıvata ve endüstriyel bağlantı çözümleri.</p>
+<h3 class="text-xl md:text-2xl font-black text-white mb-2">Bağlantı Elemanları</h3>
+<p class="text-slate-200 text-xs md:text-sm leading-relaxed">DIN normlarına uygun yüksek mukavemetli somun, cıvata ve endüstriyel bağlantı çözümleri.</p>
 </div>
 </a>
-<!-- 4. Fırça & Rulo Grubu (Span 1 Column, 1 Row) -->
-<a class="md:col-span-1 relative rounded-2xl overflow-hidden group" href="Bayilikler.html">
+<!-- 4. Fırça & Rulo Grubu -->
+<a class="md:col-span-1 relative rounded-2xl overflow-hidden group min-h-[250px]" href="Bayilikler.html">
 <img alt="industrial cleaning brushes and finishing tools" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo0zDcf0otnNkOytw5iPpNr3NNre9Yx5umoWtOC7-rHRktgo8VxvFSkdkBolaqjL2uBHaMPSEItqlx85YhGolDUBjRrqsQULzCl9GvwdP5RwON-OLRfpMutObpXBbNVrSyDNPtakNaIgCdR5HuhlNMKjL4qMIRtk1w95slL69KKKPoQdUhLZfIN23AXvI3LYL-nshkkBeUEYOa70Pm93oe5NSTS2TsjOzkQobCkQnA1dEbTDliNLDiyernUQaM1jX-Uu16R5570jSk"/>
 <div class="absolute inset-0 bg-secondary/80 mix-blend-multiply"></div>
 <div class="absolute inset-0 flex flex-col justify-end p-6">
-<h4 class="text-xl font-bold text-white mb-1">Fırça &amp; Rulo</h4>
-<p class="text-white/80 text-xs leading-tight">İzmir Fırça &amp; Rulopa profesyonel serisi.</p>
+<h4 class="text-lg md:text-xl font-bold text-white mb-1">Fırça &amp; Rulo</h4>
+<p class="text-white/80 text-[10px] md:text-xs leading-tight">İzmir Fırça &amp; Rulopa profesyonel serisi.</p>
 </div>
 </a>
 </div>
 </section>
 <!-- Partner Brands -->
-<section class="bg-white py-20">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="text-center mb-12">
-<span class="text-xs font-bold text-primary uppercase tracking-widest block mb-4">Resmi İş Ortaklarımız</span>
-<h2 class="text-3xl font-headline font-black">Dünya Markaları İle Güçlü Tedarik</h2>
+<section class="bg-white py-16 md:py-20">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-8">
+<div class="text-center mb-10 md:mb-12">
+<span class="text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest block mb-4">Resmi İş Ortaklarımız</span>
+<h2 class="text-2xl md:text-3xl font-headline font-black">Dünya Markaları İle Güçlü Tedarik</h2>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center hover:grayscale-0 transition-all duration-500">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-12 items-center hover:grayscale-0 transition-all duration-500">
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer" href="Bayilikler.html">
-<img alt="TECHNOLIT Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0ujJ1w8Y-j8UYbDMuOHecjxAKhQ2w7giuMK_EP0Eo1ZSGvUP5p9MXeUdoG7k2xrE-5wTmnq71nzUux8puCJQjzgfYuO8dSA4WFnp4Rbd3g_UcdEpniyqcFoOVIsn0zl3caIi0M6nMc-DYoRzQBJsw-fvJ8xTo5wAafmlLaNyopyf4cnDECFbMdo-AiUvMKf-4Pe0ieMcCWoZwaUh6_52wM1oT7ownGVgB10FObu5asHOybxGwL-3B93jkFbyNx58eDe1CI3JdoN7qQ"/>
+<img alt="TECHNOLIT Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujJ1w8Y-j8UYbDMuOHecjxAKhQ2w7giuMK_EP0Eo1ZSGvUP5p9MXeUdoG7k2xrE-5wTmnq71nzUux8puCJQjzgfYuO8dSA4WFnp4Rbd3g_UcdEpniyqcFoOVIsn0zl3caIi0M6nMc-DYoRzQBJsw-fvJ8xTo5wAafmlLaNyopyf4cnDECFbMdo-AiUvMKf-4Pe0ieMcCWoZwaUh6_52wM1oT7ownGVgB10FObu5asHOybxGwL-3B93jkFbyNx58eDe1CI3JdoN7qQ"/>
 </a>
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer items-center" href="Bayilikler.html">
-<img alt="TECHNIK Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0ugke-O4p3sTMQhTASoi-jlspedkKauihERuzd11Rrw5FsbLk380ystivEDH6zWgg6iVZ-y6xa5Xr7ckrQM0andDV81NLZAwi1d0q-8B58CRwtw9p-_SMyzKTcgWhJG9SlX5-nLikkeql5AiTwqEhXf7Dde1mysLNtsVCTJXq7LMRXs4bQqGKZsGVfTs4KkUVahRsn_pZK41f6DkU8CvcHWDoN3NdyXjdcaTnaaD5Z_WchrRAizZNunvuieXyGskbS_7BOKo_0TJ5ro"/>
+<img alt="TECHNIK Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugke-O4p3sTMQhTASoi-jlspedkKauihERuzd11Rrw5FsbLk380ystivEDH6zWgg6iVZ-y6xa5Xr7ckrQM0andDV81NLZAwi1d0q-8B58CRwtw9p-_SMyzKTcgWhJG9SlX5-nLikkeql5AiTwqEhXf7Dde1mysLNtsVCTJXq7LMRXs4bQqGKZsGVfTs4KkUVahRsn_pZK41f6DkU8CvcHWDoN3NdyXjdcaTnaaD5Z_WchrRAizZNunvuieXyGskbS_7BOKo_0TJ5ro"/>
 </a>
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer" href="Bayilikler.html">
-<img alt="Bosch Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0ugp5hzFaYdURkO0uvHCyUg47rrwxWfR0ut4VSYoxzkZvP3Yv2zk05yBk1exnwN4uMx4Yu2a5X4wG8pYOTxaG3Y_KMOpF505gXUlUoMkwwT8Rz__To9_bhHWonPGrnDWLPYIVTlUlzfPZ1khxoVMnd15cvCtDqaQdER4cELy5ro_uG0rQSc7tKRZd3624pFSzQFSNb5PexzkbsEW4LomW0SCCx6shI6zOPpYfpmbZTbSWro98uUaCPrzHUFug0B0v_ovYnpWy0EH558"/>
+<img alt="Bosch Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugp5hzFaYdURkO0uvHCyUg47rrwxWfR0ut4VSYoxzkZvP3Yv2zk05yBk1exnwN4uMx4Yu2a5X4wG8pYOTxaG3Y_KMOpF505gXUlUoMkwwT8Rz__To9_bhHWonPGrnDWLPYIVTlUlzfPZ1khxoVMnd15cvCtDqaQdER4cELy5ro_uG0rQSc7tKRZd3624pFSzQFSNb5PexzkbsEW4LomW0SCCx6shI6zOPpYfpmbZTbSWro98uUaCPrzHUFug0B0v_ovYnpWy0EH558"/>
 </a>
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer" href="Bayilikler.html">
-<img alt="İzeltaş Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0ujubWt2TNZ_jXXdsdtwcYo6aiemI-i2aaymsWvVg4-TwWq2J9DZUN0rd4r4LLOoJXHEz32DPb3HITau_vUDZ_3A-iy4dniVlN9_C_k1oJ7LJm0V1k2v6quB39BK-iqNvJJuMRMPtfAf1XVgm8yyzrFXXV0-MXuB8_QrkOCg9Pmsp95D637fA2y23OJHY0bekIvhD-SIRZbbcU7YSlybNp5kAwFNS3B0hSb-RR7LTzrW1QhKA6fGKf6ZKMEsVXMguzrdjyKUBI8QXA"/>
+<img alt="İzeltaş Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujubWt2TNZ_jXXdsdtwcYo6aiemI-i2aaymsWvVg4-TwWq2J9DZUN0rd4r4LLOoJXHEz32DPb3HITau_vUDZ_3A-iy4dniVlN9_C_k1oJ7LJm0V1k2v6quB39BK-iqNvJJuMRMPtfAf1XVgm8yyzrFXXV0-MXuB8_QrkOCg9Pmsp95D637fA2y23OJHY0bekIvhD-SIRZbbcU7YSlybNp5kAwFNS3B0hSb-RR7LTzrW1QhKA6fGKf6ZKMEsVXMguzrdjyKUBI8QXA"/>
 </a>
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer items-center" href="Bayilikler.html">
-<img alt="İzmir Fırça Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0uhHVUSxe9egXINXIUfkz1cJBmKnCUHMigApn-FTNBmpFR_GdFPW3SO9qgDq6F4nWmdeqbMv495qLqKwARSCsVmXGdyzMy1FN5S5nDhB4fqZZ1qkatrTnckqFSvzoLhMUMV3GMEXfjPF6fMX4HEg4RlHx_l9mZ1lrvZ_sCkcvVPz159opzF1PSLs1yyScyMmme3j5j-46BT6uxU0no6MCfNL-ognnbBiZuQws-3U3z721iY0CI2VffAD9TWlMsRzCQ8ATFtZ6hZqfdY"/>
+<img alt="İzmir Fırça Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhHVUSxe9egXINXIUfkz1cJBmKnCUHMigApn-FTNBmpFR_GdFPW3SO9qgDq6F4nWmdeqbMv495qLqKwARSCsVmXGdyzMy1FN5S5nDhB4fqZZ1qkatrTnckqFSvzoLhMUMV3GMEXfjPF6fMX4HEg4RlHx_l9mZ1lrvZ_sCkcvVPz159opzF1PSLs1yyScyMmme3j5j-46BT6uxU0no6MCfNL-ognnbBiZuQws-3U3z721iY0CI2VffAD9TWlMsRzCQ8ATFtZ6hZqfdY"/>
 </a>
 <a class="flex justify-center p-4 hover:scale-110 transition-transform cursor-pointer items-center" href="Bayilikler.html">
-<img alt="Rulopa Logo" class="max-w-full object-contain max-h-20" src="https://lh3.googleusercontent.com/aida/ADBb0uj-CrTMrJi7D__GMJYSLZrkW2juwZikO1cmKUOe4M6IazyRzsWqInsy3kdHTiKlk7nWNnff2Y4TfcJAum6TU_6qfEOGybcaaXto0LhoIxaq2q8pGTqrPTKqa3gI_pYhMtJnG3ytoPXxGdojYh2BPyJO_lgrr82-f639jQjaoALj8qtLNMd91uGOVv1WVsHxahZ-Wr_MXvtZvC7xFj27ulcq9TRdbmsR-dOIotEZt4Gbhq1pHquSqELf8M4wRO13iBGCWstJEEA8UY4"/>
+<img alt="Rulopa Logo" class="max-w-full h-12 md:h-16 lg:h-20 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uj-CrTMrJi7D__GMJYSLZrkW2juwZikO1cmKUOe4M6IazyRzsWqInsy3kdHTiKlk7nWNnff2Y4TfcJAum6TU_6qfEOGybcaaXto0LhoIxaq2q8pGTqrPTKqa3gI_pYhMtJnG3ytoPXxGdojYh2BPyJO_lgrr82-f639jQjaoALj8qtLNMd91uGOVv1WVsHxahZ-Wr_MXvtZvC7xFj27ulcq9TRdbmsR-dOIotEZt4Gbhq1pHquSqELf8M4wRO13iBGCWstJEEA8UY4"/>
 </a>
 </div>
 </div>
 </section>
 <!-- Footer -->
 <footer class="bg-white dark:bg-slate-950 border-t border-[#bec8d1]/10 w-full">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-6 md:px-12 py-16 max-w-screen-2xl mx-auto">
 <div class="space-y-6">
 <div class="flex items-center gap-2">
-<img alt="İzmir Teknik Logo" class="h-48 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
+<img alt="İzmir Teknik Logo" class="h-32 md:h-48 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujYAlHrPReN6BX6gIvlQ1OY3zAdH3wXjUM7F8HxGb-oegUiUSP4dj0qo6jscq2DG947Px8XfiOU6tvxGI_R85FHUOBrO2n_uLcTHZUwPvbABmkiAvPVtAl3HM_qDv8ydQQls_b4_joKuLgaIl_fLhzl8vHJlPnaZqWVOrCY7bDgxZSvrsAv0QLTPtTHxOJJlmwNZGtSZyLiqfXDq59hqBRl_P5NmfdDYmzeOfht9YMnG0Syb_ljtDqGl53vSbXAjfL1kANpavSk1XM"/>
 </div>
 <p class="text-slate-500 text-sm leading-relaxed">Endüstriyel ekipman ve teknik hırdavat tedariğinde Ege Bölgesi'nin güvenilir çözüm merkezi. Profesyonel kadromuzla yanınızdayız.</p>
 <div class="flex gap-4">
@@ -272,19 +293,38 @@
 <h4 class="text-sm font-black text-on-surface uppercase tracking-widest mb-6">Bize Ulaşın</h4>
 <div class="space-y-4">
 <div class="flex gap-3">
-<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="material-symbols-outlined text-primary shrink-0">location_on</span>
 <p class="text-sm text-slate-500">MANSUROĞLU MAH. ANKARA CAD. NO:81/012 BAYRAKLI TOWER Bayraklı, İzmir – Türkiye</p>
 </div>
 <div class="flex gap-3">
-<span class="material-symbols-outlined text-primary">phone</span>
+<span class="material-symbols-outlined text-primary shrink-0">phone</span>
 <p class="text-sm text-slate-500">+90 533 632 23 24</p>
 </div>
 <div class="flex gap-3">
-<span class="material-symbols-outlined text-primary">mail</span>
+<span class="material-symbols-outlined text-primary shrink-0">mail</span>
 <p class="text-sm text-slate-500">izmirtekniksatis@gmail.com</p>
 </div>
 </div>
 </div>
 </div>
 </footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = mobileMenu.classList.contains('active') ? 'close' : 'menu';
+        });
+
+        // Close menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+            });
+        });
+    </script>
 </body></html>
