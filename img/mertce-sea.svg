@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="0.45" stop-color="#831843"/>
+      <stop offset="0.75" stop-color="#c2410c"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b3b5e"/>
+      <stop offset="1" stop-color="#052030"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="224" fill="url(#sky)"/>
+
+  <circle cx="150" cy="205" r="64" fill="#fbbf24"/>
+  <path d="M138 230 L162 230 L154 302 L146 302 Z" fill="#fcd34d" opacity="0.5"/>
+
+  <g fill="#0f172a">
+    <path d="M96 150 L104 166 L88 166 Z"/>
+    <path d="M560 130 L568 146 L552 146 Z"/>
+    <path d="M290 120 L298 136 L282 136 Z"/>
+    <path d="M500 175 L508 191 L492 191 Z"/>
+  </g>
+
+  <g transform="translate(60 52)">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#fde68a" stroke-width="3" opacity="0.9"/>
+    <path d="M40 8 L46 34 L72 40 L46 46 L40 72 L34 46 L8 40 L34 34 Z" fill="#fde68a"/>
+    <circle cx="40" cy="40" r="7" fill="#fde68a"/>
+  </g>
+
+  <rect y="224" width="640" height="96" fill="url(#sea)"/>
+
+  <path d="M0 236 Q80 226 160 236 T320 236 T480 236 T640 236 L640 320 L0 320 Z" fill="#083250" opacity="0.95"/>
+  <path d="M0 262 Q90 252 180 262 T360 262 T640 262 L640 320 L0 320 Z" fill="#05283f" opacity="0.95"/>
+  <path d="M0 288 Q70 280 140 288 T280 288 T420 288 T560 288 T640 288 L640 320 L0 320 Z" fill="#03202f"/>
+  <path d="M0 238 Q80 228 160 238 T320 238 T480 238 T640 238" fill="none" stroke="#67e8f9" stroke-width="3" opacity="0.7"/>
+  <path d="M0 264 Q90 254 180 264 T360 264 T640 264" fill="none" stroke="#67e8f9" stroke-width="2.5" opacity="0.5"/>
+
+  <g transform="translate(430 178) scale(1.35)">
+    <path d="M0 34 L120 34 L100 52 L14 52 Z" fill="#0f172a"/>
+    <path d="M0 34 L120 34" stroke="#fbbf24" stroke-width="4"/>
+    <circle cx="30" cy="43" r="4" fill="#fbbf24"/>
+    <circle cx="54" cy="43" r="4" fill="#fbbf24"/>
+    <circle cx="78" cy="43" r="4" fill="#fbbf24"/>
+    <line x1="55" y1="0" x2="55" y2="36" stroke="#0f172a" stroke-width="5"/>
+    <path d="M55 2 L20 33 L55 33 Z" fill="#fef3c7"/>
+    <path d="M55 10 L94 33 L55 33 Z" fill="#ffffff"/>
+    <path d="M55 0 L55 -9 L72 -4 Z" fill="#fbbf24"/>
+    <path d="M20 33 L55 33 L55 12 Z" fill="#ffffff" opacity="0.35"/>
+  </g>
+</svg>

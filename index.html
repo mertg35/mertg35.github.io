@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mert Güventürk</title>
+  <meta name="description" content="Mert Güventürk – SUYA Danışmanlık & Yazılım Kurucu Ortağı · Satış, Süreç ve Sistem Danışmanlığı · İzmir Teknik" />
+  <meta property="og:title" content="Mert Güventürk – SUYA Danışmanlık & Yazılım" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://mertg35.github.io/hero_section.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mert Güventürk" />
+  <meta name="twitter:image" content="https://mertg35.github.io/hero_section.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="hero_section.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a class="nav__logo" href="#hero">MG</a>
+    <ul class="nav__links">
+      <li><a href="#about"      data-tr="Hakkımda"    data-en="About">Hakkımda</a></li>
+      <li><a href="#blog"       data-tr="Makaleler"   data-en="Articles">Makaleler</a></li>
+      <li><a href="#interests"  data-tr="Mertçe" data-en="Mertçe">Mertçe</a></li>
+      <li><a href="#contact"    data-tr="İletişim"    data-en="Contact">İletişim</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__menu-btn" id="menuToggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="lang-btn" id="langToggle" aria-label="Dil değiştir">EN</button>
+      <button class="nav__toggle" id="themeToggle" aria-label="Tema değiştir">
+        <span id="toggleIcon">☀️</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__portrait">
+        <img src="MG.png" alt="Mert Güventürk" width="132" height="132" />
+      </div>
+      <p class="hero__pre" data-tr="Merhaba, ben" data-en="Hello, I'm">Merhaba, ben</p>
+      <h1 class="hero__name">
+        <span class="hero__line"><span>Mert</span></span>
+        <span class="hero__line"><span>Güventürk</span></span>
+      </h1>
+      <p class="hero__role">
+        <span data-tr="Satış, Süreç ve Sistem Danışmanlığı"
+              data-en="Sales, Process &amp; Systems Consulting">Satış, Süreç ve Sistem Danışmanlığı</span>
+        &nbsp;·&nbsp;
+        <span class="hero__role-accent"
+              data-tr="Suya Danışmanlık &amp; Yazılım · İzmir Teknik"
+              data-en="SUYA Consulting &amp; Software · İzmir Tech">Suya Danışmanlık &amp; Yazılım - İzmir Teknik</span>
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact"
+           data-tr="İletişime Geç" data-en="Get in Touch">İletişime Geç</a>
+        <a class="btn btn--ghost"
+           href="https://www.linkedin.com/in/mertguventurk" target="_blank" rel="noopener">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zm-1.5-12.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM19 19h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5S11 12.12 11 13.5V19H8V8h3v1.5c.88-1.13 2.25-1.5 3.5-1.5 2.76 0 4.5 2.24 4.5 5V19z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span data-tr="Kaydır" data-en="Scroll">Kaydır</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-tr="Hakkımda" data-en="About">Hakkımda</span>
+        <h2 class="section__title"
+            data-tr="Satış, Süreç ve Sistem Danışmanlığı"
+            data-en="Sales, Process & Systems Consulting">Satış, Süreç ve Sistem Danışmanlığı</h2>
+        <p class="section__sub"
+           data-tr="SUYA Danışmanlık & Yazılım kurucu ortağıyım. KOBİ'lerin ve yeni kurulan işletmelerin satış, süreç ve sistem ihtiyaçlarını tek elden çözeriz; sahada danışmanlık yapar, gereken yazılımı kendimiz geliştiririz."
+           data-en="I am a co-founder of SUYA Consulting & Software. We solve the sales, process and system needs of SMEs and startups from a single source — consulting in the field and building the software ourselves.">
+          SUYA Danışmanlık & Yazılım kurucu ortağıyım. KOBİ'lerin ve yeni kurulan işletmelerin satış, süreç ve sistem ihtiyaçlarını tek elden çözeriz; sahada danışmanlık yapar, gereken yazılımı kendimiz geliştiririz.
+        </p>
+      </div>
+      <div class="expertise-grid">
+
+        <div class="expertise-card">
+          <div class="expertise-card__icon expertise-card__icon--sales">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3 class="expertise-card__title" data-tr="Satış &amp; Süreç Danışmanlığı" data-en="Sales & Process Consulting">Satış &amp; Süreç Danışmanlığı</h3>
+          <p class="expertise-card__text"
+             data-tr="Satış ekipleri kurar, süreçleri analiz eder, darboğazları tespit edip AI destekli iyileştirme planları çıkarırız."
+             data-en="We build sales teams, analyze processes, identify bottlenecks and create AI-powered improvement plans.">
+            Satış ekipleri kurar, süreçleri analiz eder, darboğazları tespit edip AI destekli iyileştirme planları çıkarırız.
+          </p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-card__icon expertise-card__icon--software">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3 class="expertise-card__title" data-tr="Yazılım &amp; Sistem Entegrasyonu" data-en="Software & Systems Integration">Yazılım &amp; Sistem Entegrasyonu</h3>
+          <p class="expertise-card__text"
+             data-tr="CRM, e-ticaret, muhasebe ve stok sistemlerini birbirine bağlar; eksik kalanlar için özel modüller geliştiririz."
+             data-en="We connect CRM, e-commerce, accounting and stock systems, and build custom modules for what's missing.">
+            CRM, e-ticaret, muhasebe ve stok sistemlerini birbirine bağlar; eksik kalanlar için özel modüller geliştiririz.
+          </p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-card__icon expertise-card__icon--stock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="expertise-card__title" data-tr="Ön Muhasebe &amp; Stok" data-en="Bookkeeping & Inventory">Ön Muhasebe &amp; Stok</h3>
+          <p class="expertise-card__text"
+             data-tr="Fatura ve tahsilat süreçlerini düzene koyar, stok seviyelerini belirler, envanteri satışla senkronize ederiz."
+             data-en="We streamline invoicing and collections, set stock levels and keep inventory synced with sales.">
+            Fatura ve tahsilat süreçlerini düzene koyar, stok seviyelerini belirler, envanteri satışla senkronize ederiz.
+          </p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-card__icon expertise-card__icon--tech">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13" rx="1"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="expertise-card__title" data-tr="İzmir Teknik" data-en="İzmir Tech">İzmir Teknik</h3>
+          <p class="expertise-card__text"
+             data-tr="TECHNOLIT ve TECHNIK güvencesiyle endüstriyel ekipman ve teknik hırdavat tedariğinde çözüm ortağı."
+             data-en="Trusted partner for industrial equipment and technical hardware supply with TECHNOLIT and TECHNIK.">
+            TECHNOLIT ve TECHNIK güvencesiyle endüstriyel ekipman ve teknik hırdavat tedariğinde çözüm ortağı.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-tr="Makaleler" data-en="Articles">Makaleler</span>
+        <h2 class="section__title" data-tr="Son Yazılar" data-en="Recent Posts">Son Yazılar</h2>
+      </div>
+      <div class="blog-grid">
+
+        <a class="blog-card" href="blog/b2b-lead-generation.html">
+          <div class="blog-card__thumb blog-card__thumb--sales"></div>
+          <span class="blog-card__tag" data-tr="Satış" data-en="Sales">Satış</span>
+          <h3 class="blog-card__title"
+              data-tr="KOBİ'lerde B2B Lead Generation: Satışın Gerçek Sorunu"
+              data-en="B2B Lead Generation for SMEs: Sales' Real Problem">
+            KOBİ'lerde B2B Lead Generation: Satışın Gerçek Sorunu
+          </h3>
+          <p class="blog-card__excerpt"
+             data-tr="B2B satan çoğu KOBİ'de lead generation artık daha fazla isim toplamak değil; alıcının kendi araştırması sırasında görünür olabilmektir."
+             data-en="For most SMEs selling B2B, lead generation is no longer about collecting more names — it's about being visible while the buyer researches on their own.">
+            B2B satan çoğu KOBİ'de lead generation artık daha fazla isim toplamak değil; alıcının kendi araştırması sırasında görünür olabilmektir.
+          </p>
+          <div class="blog-card__footer">
+            <time data-tr="Ağu 2026" data-en="Aug 2026">Ağu 2026</time>
+            <span class="blog-card__link" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/satis-sureclerine-ai.html">
+          <div class="blog-card__thumb blog-card__thumb--software"></div>
+          <span class="blog-card__tag" data-tr="AI &amp; Yazılım" data-en="AI & Software">AI &amp; Yazılım</span>
+          <h3 class="blog-card__title"
+              data-tr="Satış Süreçlerine AI Entegrasyonu: Yapay Zeka Çağında Satışı Yeniden Düşünmek"
+              data-en="Integrating AI into Sales Processes: Rethinking Sales in the Age of AI">
+            Satış Süreçlerine AI Entegrasyonu: Yapay Zeka Çağında Satışı Yeniden Düşünmek
+          </h3>
+          <p class="blog-card__excerpt"
+             data-tr="AI, satış ekiplerinin yerini almıyor; doğru kullanıldığında en iyi satışçıların sezgisel yaptığını herkes için mümkün kılıyor."
+             data-en="AI isn't replacing sales teams; used well, it makes what the best salespeople already do intuitively possible for everyone.">
+            AI, satış ekiplerinin yerini almıyor; doğru kullanıldığında en iyi satışçıların sezgisel yaptığını herkes için mümkün kılıyor.
+          </p>
+          <div class="blog-card__footer">
+            <time data-tr="Tem 2026" data-en="Jul 2026">Tem 2026</time>
+            <span class="blog-card__link" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/stok-takip-7-adim.html">
+          <div class="blog-card__thumb blog-card__thumb--stock"></div>
+          <span class="blog-card__tag" data-tr="Sistem" data-en="Systems">Sistem</span>
+          <h3 class="blog-card__title"
+              data-tr="Stok Takip Sistemi Kurmanın 7 Adımı: Basit Ama Hatasız"
+              data-en="7 Steps to Set Up an Inventory System: Simple But Flawless">
+            Stok Takip Sistemi Kurmanın 7 Adımı: Basit Ama Hatasız
+          </h3>
+          <p class="blog-card__excerpt"
+             data-tr="Karmaşık ERP sistemlerine gerek duymadan stok kontrolünü sağlamanın pratik yolu."
+             data-en="A practical way to control inventory without relying on complex ERP systems.">
+            Karmaşık ERP sistemlerine gerek duymadan stok kontrolünü sağlamanın pratik yolu.
+          </p>
+          <div class="blog-card__footer">
+            <time data-tr="Haz 2026" data-en="Jun 2026">Haz 2026</time>
+            <span class="blog-card__link" data-tr="Devamını oku →" data-en="Read more →">Devamını oku →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section" id="interests">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-tr="İş Dışında" data-en="Outside Work">İş Dışında</span>
+        <h2 class="section__title"
+            data-tr="MERTÇE"
+            data-en="MERTÇE">MERTÇE</h2>
+        <p class="section__sub"
+           data-tr="Bilgisayar ve sahanın dışında da enerjimi topladığım yerler."
+           data-en="Where I recharge beyond the computer and the field.">
+          Bilgisayar ve sahanın dışında da enerjimi topladığım yerler.
+        </p>
+      </div>
+      <div class="interests-strip">
+
+        <div class="interest-card">
+          <div class="interest-card__thumb interest-card__thumb--sea"></div>
+          <div class="interest-card__body">
+            <h3 class="interest-card__title" data-tr="Denizcilik Felsefesi" data-en="Philosophy of Seafaring">Denizcilik Felsefesi</h3>
+            <p class="interest-card__text"
+               data-tr="Denize açılmak yalnızca bir ulaşım biçimi değil; yön, belirsizlik ve kendi ölçeğimiz üzerine düşünmek için bir sahne."
+               data-en="Going to sea isn't just a way of getting around — it's a stage for reflecting on direction, uncertainty and our own scale.">
+              Denize açılmak yalnızca bir ulaşım biçimi değil; yön, belirsizlik ve kendi ölçeğimiz üzerine düşünmek için bir sahne.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-card__thumb interest-card__thumb--jung"></div>
+          <div class="interest-card__body">
+            <h3 class="interest-card__title" data-tr="C.G. Jung &amp; Psikoloji" data-en="C.G. Jung & Psychology">C.G. Jung &amp; Psikoloji</h3>
+            <p class="interest-card__text"
+               data-tr="Gölge, arketipler ve bireyleşme: ruhu laboratuvardan iç denize taşıyan yaklaşım."
+               data-en="Shadow, archetypes and individuation: the approach that carried the psyche from the lab into the inner sea.">
+              Gölge, arketipler ve bireyleşme: ruhu laboratuvardan iç denize taşıyan yaklaşım.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-card__thumb interest-card__thumb--depth"></div>
+          <div class="interest-card__body">
+            <h3 class="interest-card__title" data-tr="Deniz &amp; Bilinçdışı" data-en="The Sea & the Unconscious">Deniz &amp; Bilinçdışı</h3>
+            <p class="interest-card__text"
+               data-tr="Bilinç küçük bir adaysa, kolektif bilinçdışı etrafındaki uçsuz bucaksız okyanustur."
+               data-en="If consciousness is a small island, the collective unconscious is the boundless ocean around it.">
+              Bilinç küçük bir adaysa, kolektif bilinçdışı etrafındaki uçsuz bucaksız okyanustur.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag" data-tr="İletişim" data-en="Contact">İletişim</span>
+        <h2 class="section__title"
+            data-tr="Benimle İletişime Geç"
+            data-en="Get in Touch">Benimle İletişime Geç</h2>
+        <p class="section__sub"
+           data-tr="Proje, iş birliği veya herhangi bir konuda aşağıdaki kanallardan ulaşabilirsiniz."
+           data-en="You can reach me through any of the channels below for projects, collaborations, or questions.">
+          Proje, iş birliği veya herhangi bir konuda aşağıdaki kanallardan ulaşabilirsiniz.
+        </p>
+      </div>
+      <div class="contact-layout">
+
+        <!-- Contact cards -->
+        <div class="contact-grid">
+
+          <a class="contact-card" href="mailto:mert@suya.info">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-card__body">
+              <span class="contact-card__label" data-tr="E-posta" data-en="Email">E-posta</span>
+              <span class="contact-card__value">mert@suya.info</span>
+            </div>
+            <div class="contact-card__arrow">→</div>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/mertguventurk" target="_blank" rel="noopener">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zm-1.5-12.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM19 19h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5S11 12.12 11 13.5V19H8V8h3v1.5c.88-1.13 2.25-1.5 3.5-1.5 2.76 0 4.5 2.24 4.5 5V19z"/>
+              </svg>
+            </div>
+            <div class="contact-card__body">
+              <span class="contact-card__label">LInkedIn</span>
+              <span class="contact-card__value">mertguventurk</span>
+            </div>
+            <div class="contact-card__arrow">→</div>
+          </a>
+
+          <a class="contact-card" href="tel:+905335680048">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-card__body">
+              <span class="contact-card__label" data-tr="Telefon" data-en="Phone">Telefon</span>
+              <span class="contact-card__value">+90 533 568 00 48</span>
+            </div>
+            <div class="contact-card__arrow">→</div>
+          </a>
+
+        </div>
+
+        <!-- QR Code panel -->
+        <div class="qr-panel">
+          <div class="qr-box">
+            <div id="qr-canvas"></div>
+          </div>
+          <p class="qr-label" data-tr="Tara &amp; Kaydet" data-en="Scan &amp; Save">Tara &amp; Kaydet</p>
+          <p class="qr-sub"
+             data-tr="Kişi bilgilerimi rehberine ekle"
+             data-en="Add my contact to your phone">Kişi bilgilerimi rehberine ekle</p>
+          <a class="btn btn--ghost qr-download" id="vcf-download" href="#"
+             data-tr="📥 .vcf İndir" data-en="📥 Download .vcf"
+             download="Mert_Guvenkturk.vcf">📥 .vcf İndir</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Mert Güventürk</p>
+  </footer>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön">↑</button>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <script src="qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
