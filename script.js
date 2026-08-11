@@ -194,7 +194,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
 }
 
 // ========================
-// vCard QR Code (Using API for maximum compatibility)
+// vCard QR Code (generated locally to keep PII on-device)
 // ========================
 const VCARD = [
   'BEGIN:VCARD',
@@ -209,18 +209,34 @@ const VCARD = [
   'END:VCARD'
 ].join('\n');
 
+function utf16to8(str) {
+  let out = '';
+  for (let i = 0; i < str.length; i++) {
+    const c = str.charCodeAt(i);
+    if (c <= 0x007F) out += str.charAt(i);
+    else if (c > 0x07FF) out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F), 0x80 | ((c >> 6) & 0x3F), 0x80 | ((c >> 0) & 0x3F));
+    else out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F), 0x80 | ((c >> 0) & 0x3F));
+  }
+  return out;
+}
+
 function buildQR() {
   const el = document.getElementById('qr-canvas');
-  if (!el) return;
+  if (!el || typeof QRCode === 'undefined') return;
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const color = isDark ? 'e0e0ff' : '13131f';
-  const bgcolor = isDark ? '1a1a2e' : 'ffffff';
-  
-  const encodedVcard = encodeURIComponent(VCARD);
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodedVcard}&size=180x180&color=${color}&bgcolor=${bgcolor}&margin=0`;
+  const colorDark = isDark ? '#e0e0ff' : '#13131f';
+  const colorLight = isDark ? '#1a1a2e' : '#ffffff';
 
-  el.innerHTML = `<img src="${qrUrl}" alt="vCard QR Code" width="180" height="180" style="border-radius: 6px; display: block;">`;
+  el.innerHTML = '';
+  new QRCode(el, {
+    text: utf16to8(VCARD),
+    width: 180,
+    height: 180,
+    colorDark: colorDark,
+    colorLight: colorLight,
+    correctLevel: QRCode.CorrectLevel.M
+  });
 }
 
 window.addEventListener('DOMContentLoaded', buildQR);
