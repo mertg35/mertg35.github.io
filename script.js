@@ -209,17 +209,6 @@ const VCARD = [
   'END:VCARD'
 ].join('\n');
 
-function utf16to8(str) {
-  let out = '';
-  for (let i = 0; i < str.length; i++) {
-    const c = str.charCodeAt(i);
-    if (c <= 0x007F) out += str.charAt(i);
-    else if (c > 0x07FF) out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F), 0x80 | ((c >> 6) & 0x3F), 0x80 | ((c >> 0) & 0x3F));
-    else out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F), 0x80 | ((c >> 0) & 0x3F));
-  }
-  return out;
-}
-
 function buildQR() {
   const el = document.getElementById('qr-canvas');
   if (!el || typeof QRCode === 'undefined') return;
@@ -230,9 +219,10 @@ function buildQR() {
 
   el.innerHTML = '';
   new QRCode(el, {
-    text: utf16to8(VCARD),
+    text: VCARD,
     width: 180,
     height: 180,
+    typeNumber: 14,
     colorDark: colorDark,
     colorLight: colorLight,
     correctLevel: QRCode.CorrectLevel.M
