@@ -82,12 +82,13 @@ h1, h2, h3, h4, .nav__logo {
   transition: background var(--transition), border-color var(--transition);
 }
 .nav__logo {
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: -.02em;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 .nav__links {
   display: flex;
