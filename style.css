@@ -671,48 +671,6 @@ h1, h2, h3, h4, .nav__logo {
   transform: translateX(4px);
 }
 
-/* QR Panel */
-.qr-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .75rem;
-  flex: 0 0 auto;
-}
-.qr-box {
-  padding: 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-.qr-box:hover {
-  border-color: var(--indigo-light);
-  box-shadow: var(--shadow);
-}
-.qr-box img, .qr-box canvas {
-  display: block;
-  border-radius: 6px;
-}
-.qr-label {
-  font-size: .95rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.qr-sub {
-  font-size: .8rem;
-  color: var(--text-muted);
-  text-align: center;
-}
-.qr-download {
-  margin-top: .25rem;
-  font-size: .85rem;
-  padding: .6rem 1.2rem;
-}
-
 /* ===========================
    FOOTER
    =========================== */
