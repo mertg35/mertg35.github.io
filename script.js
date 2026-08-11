@@ -222,7 +222,7 @@ function buildQR() {
     text: VCARD,
     width: 180,
     height: 180,
-    typeNumber: 14,
+    typeNumber: 16,
     colorDark: colorDark,
     colorLight: colorLight,
     correctLevel: QRCode.CorrectLevel.M
